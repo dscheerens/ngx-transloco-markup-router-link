@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-title>
+        {{ TRANSLATIONS.TITLE | transloco }}
+    </mat-card-title>
+    <mat-card-content>
+        <ul>
+            <li><transloco [key]="TRANSLATIONS.ROUTE_1" [params]="{ link: { route: ['one'] }}" [transpilers]="transpilers"></transloco></li>
+            <li><transloco [key]="TRANSLATIONS.ROUTE_2" [params]="{ link: { route: ['two'] }}" [transpilers]="transpilers"></transloco></li>
+            <li><transloco [key]="TRANSLATIONS.ROUTE_3" [params]="{ link: { route: ['three'] }}" [transpilers]="transpilers"></transloco></li>
+        </ul>
+        <router-outlet></router-outlet>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,9 @@
+{
+    "ROUTER_LINK": {
+        "TITLE": "Router link voorbeeld",
+        "ROUTE_1": "Route [link]één[/link]",
+        "ROUTE_2": "Route [link]twee[/link]",
+        "ROUTE_3": "Route [link]drie[/link]",
+        "CURRENT_ROUTE": "Huidige route is: [b]{{ route }}[/b]"
+    }
+}
