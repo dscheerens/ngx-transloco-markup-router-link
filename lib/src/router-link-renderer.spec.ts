@@ -81,7 +81,7 @@ describe('RouterLinkRenderer class', () => {
 
             anchorElement.dispatchEvent(clickEvent());
 
-            expect(navigateByUrlSpy).toHaveBeenCalled(); // ('/some/place/far/away?with=a%20lot%20of%20sun!', link);
+            expect(navigateByUrlSpy).toHaveBeenCalled();
             expect(navigateByUrlSpy.calls.first().args[0].toString()).toBe('/some/place/far/away?with=a%20lot%20of%20sun!');
             expect(navigateByUrlSpy.calls.first().args[1]).toBe(link);
         });
