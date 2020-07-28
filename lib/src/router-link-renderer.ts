@@ -5,6 +5,9 @@ import { LinkRenderer } from 'ngx-transloco-markup';
 
 import { RouterLink, isRouterLink, NavigationCommand } from './router-link.model';
 
+/**
+ * An implementation of `LinkRenderer` that supports the rendering of `RouterLink` values: links that target an (internal) Angular route.
+ */
 @Injectable()
 export class RouterLinkRenderer extends LinkRenderer<RouterLink> {
 
@@ -15,10 +18,16 @@ export class RouterLinkRenderer extends LinkRenderer<RouterLink> {
         super();
     }
 
+    /**
+     * @inheritdoc
+     */
     public supports(link: unknown): link is RouterLink {
         return isRouterLink(link);
     }
 
+    /**
+     * @inheritdoc
+     */
     public render(link: RouterLink, targetElement: HTMLAnchorElement): void {
         this.setAnchorElementHref(targetElement, link);
         this.setAnchorElementTarget(targetElement, link);
