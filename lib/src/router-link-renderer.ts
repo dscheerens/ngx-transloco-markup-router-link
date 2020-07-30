@@ -9,14 +9,12 @@ import { RouterLink, isRouterLink, NavigationCommand } from './router-link.model
  * An implementation of `LinkRenderer` that supports the rendering of `RouterLink` values: links that target an (internal) Angular route.
  */
 @Injectable()
-export class RouterLinkRenderer extends LinkRenderer<RouterLink> {
+export class RouterLinkRenderer implements LinkRenderer<RouterLink> {
 
     constructor(
         private readonly router: Router,
         private readonly locationStrategy: LocationStrategy
-    ) {
-        super();
-    }
+    ) { }
 
     /**
      * @inheritdoc
