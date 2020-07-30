@@ -2,14 +2,14 @@
 
 # ngx-transloco-markup-router-link
 
-A plugin for **[ngx-transloco-markup](https://github.com/dscheerens/ngx-transloco-markup/blob/master/README.md)** that supports router links.
+A plugin for **[ngx-transloco-markup](https://github.com/dscheerens/ngx-transloco-markup)** that supports router links.
 The support for such links has intentionally been excluded from the **ngx-transloco-markup** core library, as this would introduce a dependency to `@angular/router`.
 Not all applications using **Transloco** will be using the Angular router.
 For those that do, and which also need for router links in translations, this plugin delivers that support.
 
 ## Installation
 
-This library is a plugin for **ngx-transloco-markup**, so first make sure that package is [installed](https://github.com/dscheerens/ngx-transloco-markup/blob/master/README.md#installation) and your application has been [configured](https://github.com/dscheerens/ngx-transloco-markup/blob/master/README.md#getting-started) to use it.
+This library is a plugin for **ngx-transloco-markup**, so first make sure that package is [installed](https://github.com/dscheerens/ngx-transloco-markup#installation) and your application has been [configured](https://github.com/dscheerens/ngx-transloco-markup#getting-started) to use it.
 
 The next step is to install the `ngx-transloco-markup-router-link` package from NPM:
 
