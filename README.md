@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/dscheerens/ngx-transloco-markup-router-link.svg?branch=master)](https://travis-ci.com/dscheerens/ngx-transloco-markup-router-link) [![NPM Version](https://img.shields.io/npm/v/ngx-transloco-markup-router-link.svg)](https://www.npmjs.com/package/ngx-transloco-markup)
+[![Build Status](https://travis-ci.com/dscheerens/ngx-transloco-markup-router-link.svg?branch=master)](https://travis-ci.com/dscheerens/ngx-transloco-markup-router-link) [![NPM Version](https://img.shields.io/npm/v/ngx-transloco-markup-router-link.svg)](https://www.npmjs.com/package/ngx-transloco-markup-router-link)
 
 # ngx-transloco-markup-router-link
 
