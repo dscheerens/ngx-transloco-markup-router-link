@@ -67,9 +67,9 @@ describe('RouterLinkRenderer class', () => {
         });
 
         it('sets a click handler that uses the router to navigate for normal clicks', () => {
-            const { service, get } = createService();
+            const { service, inject } = createService();
 
-            const router = get(Router);
+            const router = inject(Router);
 
             const navigateByUrlSpy = spyOn(router, 'navigateByUrl').and.returnValue(Promise.resolve(true));
 
@@ -87,9 +87,9 @@ describe('RouterLinkRenderer class', () => {
         });
 
         it('sets a click handler that uses the default browser navigation action for "open in new window/tab" clicks', () => {
-            const { service, get } = createService();
+            const { service, inject } = createService();
 
-            const router = get(Router);
+            const router = inject(Router);
 
             const navigateByUrlSpy = spyOn(router, 'navigateByUrl').and.returnValue(Promise.resolve(true));
 
@@ -111,9 +111,9 @@ describe('RouterLinkRenderer class', () => {
         });
 
         it('sets a click handler that uses the default browser navigation action when the link targets a different window or frame', () => {
-            const { service, get } = createService();
+            const { service, inject } = createService();
 
-            const router = get(Router);
+            const router = inject(Router);
 
             const navigateByUrlSpy = spyOn(router, 'navigateByUrl').and.returnValue(Promise.resolve(true));
 
