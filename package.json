@@ -36,7 +36,7 @@
     "@angular/common": ">=10.0.0",
     "@angular/core": ">=10.0.0",
     "@angular/router": ">=10.0.0",
-    "ngx-transloco-markup": "^1.0.0"
+    "ngx-transloco-markup": "^2.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.1000.8",
@@ -68,7 +68,7 @@
     "karma-jasmine": "^4.0.1",
     "karma-mocha-reporter": "^2.2.5",
     "ng-packagr": "^10.0.4",
-    "ngx-transloco-markup": "^1.0.0",
+    "ngx-transloco-markup": "^2.0.0",
     "ngx-typesafe-forms": "^1.1.1",
     "rxjs": "^6.6.2",
     "tsickle": "0.39.1",

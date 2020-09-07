@@ -1,5 +1,5 @@
 import { Provider } from '@angular/core';
-import { LinkRenderer } from 'ngx-transloco-markup';
+import { provideLinkRenderer } from 'ngx-transloco-markup';
 
 import { RouterLinkRenderer } from './router-link-renderer';
 
@@ -8,7 +8,5 @@ import { RouterLinkRenderer } from './router-link-renderer';
  * the providers array of a `NgModule` decorator.
  */
 export function translocoMarkupRouterLinkRenderer(): Provider[] {
-    return [
-        { provide: LinkRenderer, useClass: RouterLinkRenderer, multi: true }
-    ];
+    return [ provideLinkRenderer(RouterLinkRenderer) ];
 }
