@@ -23,15 +23,15 @@ import { CurrentRouteComponent } from './current-route.component';
         RouterModule.forChild([
             { path: 'one', component: CurrentRouteComponent },
             { path: 'two', component: CurrentRouteComponent },
-            { path: 'three', component: CurrentRouteComponent }
-        ])
+            { path: 'three', component: CurrentRouteComponent },
+        ]),
     ],
     declarations: [
         RouterLinkFeatureComponent,
-        CurrentRouteComponent
+        CurrentRouteComponent,
     ],
     exports: [
-        RouterLinkFeatureComponent
-    ]
+        RouterLinkFeatureComponent,
+    ],
 })
 export class RouterLinkFeatureModule { }

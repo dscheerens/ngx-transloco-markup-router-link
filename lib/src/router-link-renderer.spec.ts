@@ -12,11 +12,11 @@ describe('RouterLinkRenderer class', () => {
     const createService = createServiceFactory({
         service: RouterLinkRenderer,
         imports: [
-            RouterTestingModule.withRoutes([])
+            RouterTestingModule.withRoutes([]),
         ],
         providers: [
-            { provide: LocationStrategy, useClass: MockLocationStrategy }
-        ]
+            { provide: LocationStrategy, useClass: MockLocationStrategy },
+        ],
     });
 
     describe('supports function', () => {
@@ -51,7 +51,7 @@ describe('RouterLinkRenderer class', () => {
 
         it('sets the anchor href to the serialized route', () => {
             function getRenderedRoutePath(link: RouterLink): string {
-                return render(link).href.split(/http:\/\/localhost:\d+\//)[1];
+                return render(link).href.split(/http:\/\/localhost:\d+\//)[1]!;
             }
 
             expect(getRenderedRoutePath({ route: 'floatation-device' })).toBe('floatation-device');

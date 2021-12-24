@@ -6,14 +6,14 @@ import { TranslocoService } from '@ngneat/transloco';
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit {
     public availableLanguages!: string[];
     public activeLanguage$!: Observable<string>;
 
     constructor(
-        private readonly translocoService: TranslocoService
+        private readonly translocoService: TranslocoService,
     ) { }
 
     public ngOnInit(): void {
