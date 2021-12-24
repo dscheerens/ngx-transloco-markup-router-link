@@ -7,7 +7,7 @@ import { ROUTER_LINK_FEATURE_TRANSLATION_KEYS } from './router-link-feature-tran
     selector: 'app-router-link-feature',
     templateUrl: './router-link-feature.component.html',
     styleUrls: ['./router-link-feature.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RouterLinkFeatureComponent implements OnInit {
 
@@ -16,12 +16,12 @@ export class RouterLinkFeatureComponent implements OnInit {
     public transpilers!: TranslationMarkupTranspiler[];
 
     constructor(
-        private readonly contextualLinkTranspilerFactory: ContextualLinkTranspilerFactory
+        private readonly contextualLinkTranspilerFactory: ContextualLinkTranspilerFactory,
     ) { }
 
     public ngOnInit(): void {
         this.transpilers = [
-            this.contextualLinkTranspilerFactory.createBlockTranspiler('link')
+            this.contextualLinkTranspilerFactory.createBlockTranspiler('link'),
         ];
     }
 

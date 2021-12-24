@@ -13,7 +13,7 @@ export class RouterLinkRenderer implements LinkRenderer<RouterLink> {
 
     constructor(
         private readonly router: Router,
-        private readonly locationStrategy: LocationStrategy
+        private readonly locationStrategy: LocationStrategy,
     ) { }
 
     /**

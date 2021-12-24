@@ -14,7 +14,7 @@ export interface RouterLink extends NavigationExtras {
 }
 
 /** Type alias for a navigation command (which unfortunately is typed as `any` by Angular). */
-export type NavigationCommand = any;
+export type NavigationCommand = any; // tslint:disable-line:no-any
 
 /**
  * Type guard function to check whether the specified value is a `RouterLink`.
