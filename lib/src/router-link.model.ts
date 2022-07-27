@@ -2,6 +2,10 @@ import { NavigationExtras } from '@angular/router';
 
 import { hasProperty } from './utils/has-property';
 
+import type { Router } from '@angular/router';
+
+import type { ArrayElement } from './utils/array-element.type';
+
 /**
  * Model for storing a link that targets an Angular route within the active application.
  */
@@ -14,7 +18,7 @@ export interface RouterLink extends NavigationExtras {
 }
 
 /** Type alias for a navigation command (which unfortunately is typed as `any` by Angular). */
-export type NavigationCommand = any; // tslint:disable-line:no-any
+export type NavigationCommand = ArrayElement<Parameters<Router['navigate']>[0]>;
 
 /**
  * Type guard function to check whether the specified value is a `RouterLink`.

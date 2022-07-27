@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { distinctUntilChanged, map, startWith } from 'rxjs/operators';
@@ -11,7 +11,6 @@ import { ROUTER_LINK_FEATURE_TRANSLATION_KEYS } from './router-link-feature-tran
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CurrentRouteComponent implements OnInit {
-
     public currentRoute$!: Observable<string>;
 
     public readonly TRANSLATIONS = ROUTER_LINK_FEATURE_TRANSLATION_KEYS;
@@ -27,5 +26,4 @@ export class CurrentRouteComponent implements OnInit {
             distinctUntilChanged(),
         );
     }
-
 }

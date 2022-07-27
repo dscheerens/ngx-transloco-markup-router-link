@@ -3,18 +3,17 @@ import { Injectable } from '@angular/core';
 import { Router, UrlTree } from '@angular/router';
 import { LinkRenderer } from 'ngx-transloco-markup';
 
-import { RouterLink, isRouterLink, NavigationCommand } from './router-link.model';
+import { NavigationCommand, RouterLink, isRouterLink } from './router-link.model';
 
 /**
  * An implementation of `LinkRenderer` that supports the rendering of `RouterLink` values: links that target an (internal) Angular route.
  */
 @Injectable()
 export class RouterLinkRenderer implements LinkRenderer<RouterLink> {
-
     constructor(
         private readonly router: Router,
         private readonly locationStrategy: LocationStrategy,
-    ) { }
+    ) {}
 
     /**
      * @inheritdoc
@@ -71,7 +70,6 @@ export class RouterLinkRenderer implements LinkRenderer<RouterLink> {
 
         return this.router.createUrlTree(navigationCommands, link);
     }
-
 }
 
 function getRouterLinkNavigationCommands(link: RouterLink): NavigationCommand[] {

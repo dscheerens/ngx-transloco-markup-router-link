@@ -1,15 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { RouterModule } from '@angular/router';
 import { TranslocoModule } from '@ngneat/transloco';
-import { TranslocoMarkupModule } from 'ngx-transloco-markup';
+import { TranslocoMarkupComponent } from 'ngx-transloco-markup';
 
-import { RouterLinkFeatureComponent } from './router-link-feature.component';
 import { CurrentRouteComponent } from './current-route.component';
+import { RouterLinkFeatureComponent } from './router-link-feature.component';
 
 @NgModule({
     imports: [
@@ -19,7 +19,7 @@ import { CurrentRouteComponent } from './current-route.component';
         MatFormFieldModule,
         MatInputModule,
         TranslocoModule,
-        TranslocoMarkupModule,
+        TranslocoMarkupComponent,
         RouterModule.forChild([
             { path: 'one', component: CurrentRouteComponent },
             { path: 'two', component: CurrentRouteComponent },
@@ -34,4 +34,4 @@ import { CurrentRouteComponent } from './current-route.component';
         RouterLinkFeatureComponent,
     ],
 })
-export class RouterLinkFeatureModule { }
+export class RouterLinkFeatureModule {}

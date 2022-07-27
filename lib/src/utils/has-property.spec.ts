@@ -1,7 +1,6 @@
 import { hasProperty } from './has-property';
 
 describe('hasProperty function', () => {
-
     it('returns `true` if an object contains the specified property', () => {
         expect(hasProperty({ someProperty: undefined }, 'someProperty')).toBe(true);
         expect(hasProperty({ foo: '', bar: 'baz' }, 'foo')).toBe(true);
@@ -18,5 +17,4 @@ describe('hasProperty function', () => {
         expect(hasProperty([], 'something')).toBe(false);
         expect(hasProperty({ foo: '', bar: 'baz' }, 'baz')).toBe(false);
     });
-
 });

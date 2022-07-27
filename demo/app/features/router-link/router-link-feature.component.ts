@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { TranslationMarkupTranspiler, ContextualLinkTranspilerFactory } from 'ngx-transloco-markup';
+import { ContextualLinkTranspilerFactory, TranslationMarkupTranspiler } from 'ngx-transloco-markup';
 
 import { ROUTER_LINK_FEATURE_TRANSLATION_KEYS } from './router-link-feature-translation-keys';
 
@@ -10,7 +10,6 @@ import { ROUTER_LINK_FEATURE_TRANSLATION_KEYS } from './router-link-feature-tran
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RouterLinkFeatureComponent implements OnInit {
-
     public readonly TRANSLATIONS = ROUTER_LINK_FEATURE_TRANSLATION_KEYS;
 
     public transpilers!: TranslationMarkupTranspiler[];
@@ -24,5 +23,4 @@ export class RouterLinkFeatureComponent implements OnInit {
             this.contextualLinkTranspilerFactory.createBlockTranspiler('link'),
         ];
     }
-
 }

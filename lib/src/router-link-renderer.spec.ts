@@ -7,8 +7,9 @@ import { createServiceFactory } from '@ngneat/spectator';
 import { RouterLinkRenderer } from './router-link-renderer';
 import { RouterLink } from './router-link.model';
 
-describe('RouterLinkRenderer class', () => {
+/* eslint-disable @typescript-eslint/unbound-method */
 
+describe('RouterLinkRenderer class', () => {
     const createService = createServiceFactory({
         service: RouterLinkRenderer,
         imports: [
@@ -48,7 +49,6 @@ describe('RouterLinkRenderer class', () => {
     });
 
     describe('render function', () => {
-
         it('sets the anchor href to the serialized route', () => {
             function getRenderedRoutePath(link: RouterLink): string {
                 return render(link).href.split(/http:\/\/localhost:\d+\//)[1]!;
@@ -56,7 +56,7 @@ describe('RouterLinkRenderer class', () => {
 
             expect(getRenderedRoutePath({ route: 'floatation-device' })).toBe('floatation-device');
             expect(getRenderedRoutePath({ route: ['foo', 'bar', 'baz'] })).toBe('foo/bar/baz');
-            expect(getRenderedRoutePath({ route: ['a', { b: 'c', d: 'e'}, 'f'], queryParams: { g: 'h', i: 'j' } }))
+            expect(getRenderedRoutePath({ route: ['a', { b: 'c', d: 'e' }, 'f'], queryParams: { g: 'h', i: 'j' } }))
                 .toBe('a;b=c;d=e/f?g=h&i=j');
         });
 
@@ -82,7 +82,8 @@ describe('RouterLinkRenderer class', () => {
             anchorElement.dispatchEvent(clickEvent());
 
             expect(navigateByUrlSpy).toHaveBeenCalled();
-            expect(navigateByUrlSpy.calls.first().args[0].toString()).toBe('/some/place/far/away?with=a%20lot%20of%20sun!');
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+            expect(String(navigateByUrlSpy.calls.first().args[0])).toBe('/some/place/far/away?with=a%20lot%20of%20sun!');
             expect(navigateByUrlSpy.calls.first().args[1]).toBe(link);
         });
 
@@ -139,9 +140,7 @@ describe('RouterLinkRenderer class', () => {
 
                 expect(navigateByUrlSpy).toHaveBeenCalled();
             }
-
         });
-
     });
 
     function render(link: RouterLink): HTMLAnchorElement {

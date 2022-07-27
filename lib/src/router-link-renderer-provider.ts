@@ -8,5 +8,5 @@ import { RouterLinkRenderer } from './router-link-renderer';
  * the providers array of a `NgModule` decorator.
  */
 export function translocoMarkupRouterLinkRenderer(): Provider[] {
-    return [ provideLinkRenderer(RouterLinkRenderer) ];
+    return [provideLinkRenderer(RouterLinkRenderer)];
 }
