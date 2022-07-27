@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/dscheerens/ngx-transloco-markup-router-link/compare/v3.0.0...v4.0.0) (2022-07-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** this library now requires Angular 14 (or higher) and `ngx-transloco-markup` 4 (or higher), older versions are no longer supported
+
+* **deps:** upgrade to Angular 14 ([730ad18](https://github.com/dscheerens/ngx-transloco-markup-router-link/commit/730ad18eb08faae96b4d0dfa5745bbad2136f9d1))
+
 ## [3.0.0](https://github.com/dscheerens/ngx-transloco-markup-router-link/compare/v2.0.0...v3.0.0) (2021-12-24)
 
 

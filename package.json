@@ -1,6 +1,6 @@
 {
   "name": "ngx-transloco-markup-router-link",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Link renderer for ngx-tranlate-markup that supports router links",
   "homepage": "https://github.com/dscheerens/ngx-transloco-markup-router-link",
   "author": "Daan Scheerens",
